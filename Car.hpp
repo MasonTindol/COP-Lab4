@@ -1,5 +1,3 @@
-// .hpp header file. Keeps the description of the class. No implementation.
-// Inclusion guard
 #ifndef CAR_HPP
 #define CAR_HPP
 
@@ -9,13 +7,16 @@ class Car {
 public:
     // No arg constructor
     Car();
-    Car(const std::string& mk, const std::string& mdl, int y, double car_mpg, double car_mileage, double car_capacity, double car_level);
+    Car(const std::string& make_, const std::string& model_, int year_, double mpg_, double fuel_capacity_);
 
     // printInfo method
     void printInfo() const;
 
     // add refuel method
     void refuel(double gallons);
+    
+    // add drive method
+    void drive(double distance);
 
     // Getters
     std::string getMake() const;
@@ -27,13 +28,13 @@ public:
     double      getLevel() const; 
 
     // Setters
-    void        setMake(const std::string& mk);
-    void        setModel(const std::string& md);
-    void        setYear(int y);
-    void        setMPG(double new_mpg);
-    void        setMileage(double car_mileage);
-    void        setCapacity(double car_capacity);
-    void        setLevel(double car_level); 
+    void        setMake(const std::string& make_);
+    void        setModel(const std::string& model_);
+    void        setYear(int year_);
+    void        setMPG(double mpg_);
+    void        setMileage(double mileage_);
+    void        setCapacity(double fuel_capacity_);
+    void        setLevel(double fuel_level_); 
 
 private:
     std::string make;
